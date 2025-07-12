@@ -1,16 +1,23 @@
-//import { useState } from 'react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css'
-
+//pages
+import Home from "./pages/Home/Home.jsx";
+import About from "./pages/About/About.jsx"
 function App() {
 
 
   return (
-    <>
-      <div>
-      MiniBlog
+    <div className='App'>
+      <BrowserRouter>
+      <div className='container'>
+        <Routes>
+
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About/>}/>
+        </Routes>
       </div>
-     
-    </>
+      </BrowserRouter>
+    </div>
   )
 }
 
