@@ -4,8 +4,8 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
     return (
     <nav className={styles.navbar}>
-        <NavLink to="/" className={({ isActive }) => (isActive ? "" : styles.brend)}>
-            Mini <span>Blog</span>
+        <NavLink to="/" className={({ isActive }) => (isActive ? "" : styles.brand)}>
+            Mini <span className={styles.brand_span}>Blog</span>
         </NavLink>
         <ul className={styles.links_list}>
 
