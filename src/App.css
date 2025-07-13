@@ -1,4 +1,5 @@
 .container {
-  min-height: 60v;
+  min-height: 60vh;
   margin-bottom: 5em;
+  min-width: 100vw;
 }
