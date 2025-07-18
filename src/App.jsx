@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
+//context
+import {AuthProvider} from "./context/AuthContext.jsx"
 //pages
 import Home from './pages/Home/Home.jsx';
 import About from './pages/About/About.jsx';
@@ -12,6 +14,7 @@ import Register from './pages/Register/Register.jsx';
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <BrowserRouter>
         <Navbar />
         <div className="container">
@@ -24,6 +27,7 @@ function App() {
         </div>
         <Footer />
       </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
