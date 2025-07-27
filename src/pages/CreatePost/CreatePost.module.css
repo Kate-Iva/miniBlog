@@ -81,12 +81,12 @@ textarea {
   font-size: 1em;
   margin-top: 1em;
 }
-.btn .btn-dark{
+.btn .btnDark{
   background-color: #000;
   border-radius: 0;
 }
 
-.btn .btn-outline {
+.btn .btnOutline {
   background-color: transparent;
   border-radius: 0;
   color: #000;
@@ -99,11 +99,11 @@ textarea {
   color: #fff;
 }
 
-.btn.btn-outline:hover {
+.btn.btnOutline:hover {
   background-color: #000;
 }
 
-.btn.btn-danger:hover {
+.btn.btnDanger:hover {
 background-color: #dc3545;
 }
 
