@@ -5,12 +5,14 @@ import React from "react";
 //hooks
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
+import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 
 // components
+import PostDetail from "../../components/PostDetail/PostDetail"
 
 const Home = () => {
 const [query, setQuery] = useState("");
-const [posts] = useState([]);
+const { documents: posts, loading } = useFetchDocuments("posts");
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -23,7 +25,11 @@ const handleSubmit = (e) => {
           <input type="text" placeholder="Ou busque tags..." />
           <button className={`${styles.btn} && ${styles.btnDark}`}>Pesquisar</button>
         </form>
-        <div>Posts...</div>
+        {loading && <p>Carregando...</p>}
+        {posts && posts.map((post) => (
+            <PostDetail key={post.id} post={post}/>
+          
+        ))}
         {posts && posts.length === 0 && (
           <div className={styles.noposts}> 
           <p>Não foram encondrados posts</p>
