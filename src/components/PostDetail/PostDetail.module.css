@@ -6,8 +6,29 @@
     margin-bottom: 10px;
 }
 .postImage {
-    width: 320px;
+    max-width: 600px;
 }
+.postDetail h2 {
+    margin-bottom: .4em;
+}
+
+.postDetail .tags {
+    margin-bottom: 1.2em;
+    display: flex;
+}
+.tags p {
+    margin-right: .5em;
+}
+.tags span {
+    font-weight: bold;
+}
+.createdby {
+    font-style: italic;
+    color: #444;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+
 input::placeholder,
 textarea::placeholder {
   font-family: "Montserrat", sans-serif;
@@ -83,7 +104,7 @@ textarea {
   border-radius: 0;
 }
 
-.btn .btnOutline {
+.btnOutlined {
   background-color: transparent;
   border-radius: 0;
   color: #000;
@@ -96,11 +117,11 @@ textarea {
   color: #fff;
 }
 
-.btn.btnOutline:hover {
+.btnOutlined:hover {
   background-color: #000;
 }
 
-.btn.btnDanger:hover {
+.btnDanger:hover {
 background-color: #dc3545;
 }
 
