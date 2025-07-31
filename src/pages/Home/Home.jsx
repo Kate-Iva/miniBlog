@@ -14,15 +14,21 @@ const Home = () => {
 const [query, setQuery] = useState("");
 const { documents: posts, loading } = useFetchDocuments("posts");
 
+const navigate = useNavigate();
+
 const handleSubmit = (e) => {
   e.preventDefault();
+
+  if (query) {
+    return navigate(`/search?q=${query}`);
+  }
 };
 
     return (
       <div className={styles.home}>
         <h1>Veja os nossos posts mais recentes</h1>
         <form onSubmit={handleSubmit} className={styles.searchForm}>
-          <input type="text" placeholder="Ou busque tags..." />
+          <input type="text" placeholder="Ou busque tags..."  onChange={(e) => setQuery(e.target.value)}/>
           <button className={`${styles.btn} && ${styles.btnDark}`}>Pesquisar</button>
         </form>
         {loading && <p>Carregando...</p>}
