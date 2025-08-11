@@ -21,6 +21,7 @@ import Post from "./pages/Post/Post.jsx"
 //components
 import Navbar from './components/Navbar/Navbar.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import EditPost from './pages/EditPost/EditPost.jsx';
 
 
 
@@ -53,6 +54,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/search" element={<Search />} />
             <Route path="/posts/:id" element={<Post />} />
+            <Route path="/posts/edit/:id" element={user ? <EditPost /> : <Navigate to="/login" />} />
             <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
             <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
             <Route path="/posts/create" element={user ? <CreatePost/> : <Navigate to="/login" />} />
