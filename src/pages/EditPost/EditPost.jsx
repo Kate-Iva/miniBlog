@@ -25,7 +25,7 @@ const EditPost = () => {
       setImage(post.image);
       setBody(post.body);
 
-      const textTags = post.tags.join(", ");
+      const textTags = post.tagsArray.join(", ");
 
       setTags(textTags);
     }
@@ -76,7 +76,7 @@ const EditPost = () => {
   };
 
   return (
-    <div className={styles.edit_post}>
+    <div className={styles.editPost}>
       {post && (
         <>
           <h2>Editando post: {post.title}</h2>
@@ -104,9 +104,9 @@ const EditPost = () => {
                 value={image}
               />
             </label>
-            <p className={styles.preview_title}>Preview da imagem atual:</p>
+            <p className={styles.previewTitle}>Preview da imagem atual:</p>
             <img
-              className={styles.image_preview}
+              className={styles.imagePreview}
               src={post.image}
               alt={post.title}
             />

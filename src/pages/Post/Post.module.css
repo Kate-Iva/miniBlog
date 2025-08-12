@@ -1,3 +1,6 @@
+.postContainer img {
+  max-width: 600px;
+}
 .postContainer {
     text-align: center;
   }
