@@ -6,7 +6,7 @@
     margin-bottom: 10px;
 }
 .postImage {
-    max-width: 600px;
+    max-width: 300px;
 }
 .postDetail h2 {
     margin-bottom: .4em;
@@ -135,4 +135,13 @@ button[disabled] {
   border: 1px solid #f5c6cb;
   padding: 5px;
   border-radius: 5px;
+}
+
+@media (min-width: 768px){
+.postImage {
+    max-width: 600px;
+}
+}
+@media (min-width: 1200px){
+
 }

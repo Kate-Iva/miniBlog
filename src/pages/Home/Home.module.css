@@ -5,6 +5,9 @@
     justify-content: center;
 }
 
+.home h1 {
+  font-size: 18px;
+}
 .searchForm {
     max-width: 100%;
     width: 60%;
@@ -141,4 +144,14 @@ button[disabled] {
   border: 1px solid #f5c6cb;
   padding: 5px;
   border-radius: 5px;
+}
+
+
+@media (min-width: 768px){
+.home h1 {
+  font-size: 32px;
+}
+}
+@media (min-width: 1200px){
+
 }

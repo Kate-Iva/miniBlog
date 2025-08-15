@@ -1,5 +1,5 @@
 .postContainer img {
-  max-width: 600px;
+  max-width: 300px;
 }
 .postContainer {
     text-align: center;
@@ -20,4 +20,14 @@
   
   .tags span {
     font-weight: bold;
+  }
+
+  @media (min-width: 768px){
+.postContainer img {
+  max-width: 600px;
+}
+
+@media (min-width: 1200px){
+
+}
   }

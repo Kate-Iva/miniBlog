@@ -3,7 +3,7 @@
 }
 
 .editPost h2 {
-    font-size: 2.2em;
+    font-size: 1em;
 }
 
 .editPost p {
@@ -127,3 +127,13 @@ button[disabled] {
   padding: 5px;
   border-radius: 5px;
 }
+
+  @media (min-width: 768px){
+.editPost h2 {
+    font-size: 2.2em;
+}
+
+@media (min-width: 1200px){
+
+}
+  }
