@@ -54,7 +54,7 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
           );
         });
       } catch (error) {
-        console.log(error);
+       // console.log(error);
         setError(error.message);
       }
 
@@ -64,7 +64,7 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
     loadData();
   }, [docCollection, documents, search, uid, cancelled]);
 
-  console.log(documents);
+//  console.log(documents);
 
   useEffect(() => {
     return () => setCancelled(true);

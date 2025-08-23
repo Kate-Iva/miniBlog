@@ -16,8 +16,8 @@ const Dashboard = () => {
   const { deleteDocument } = useDeleteDocument("posts");
   
 
-  console.log(uid);
-  console.log(posts);
+//  console.log(uid);
+//  console.log(posts);
 
   return (
     <div className={styles.dashboard}>

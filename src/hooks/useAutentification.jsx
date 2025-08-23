@@ -50,8 +50,8 @@ export const useAuthentication = () => {
 
          } catch (error) {
            
-            console.log(error.message)
-            console.log(typeof error.message)
+            //console.log(error.message)
+           // console.log(typeof error.message)
 
             let systemErrorMessage
 
